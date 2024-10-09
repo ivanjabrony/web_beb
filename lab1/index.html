@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Zabro gallery</title>
+</head>
+
+<body>
+<h1>Zabro gallery</h1>
+
+
+<!--- add pages for galleries, faq and bio info--->
+<nav role="menu">
+    <ul class="nav_bar" style="list-style: none">
+        <li><a href="index.html" style="text-decoration: none">Main page</a></li>
+        <li><a href="about.html" style="text-decoration: none">About me</a></li>
+        <li><a href="" style="text-decoration: none">Gallery #1</a></li>
+        <li><a href="" style="text-decoration: none">Gallery #2</a></li>
+        <li><a href="" style="text-decoration: none">Gallery #3</a></li>
+        <li><a href="" style="text-decoration: none">FAQ</a></li>
+    </ul>
+</nav>
+
+<section id="main">
+<div class="gallery">
+    <div class="gallery-item">
+        <div class="img__wrap">  
+            <img class="img__img"
+                src="images/pic1.png"
+                alt="Image 1">
+            
+            <div class="img__description_layer"
+                 onclick="openModal('images/pic1.png')">
+                <p class="img__description">Gallery#1</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery-item">
+        <div class="img__wrap">
+            <img class="img__img"
+                 src="images/pic2.png"
+                 alt="Image 2">
+
+            <div class="img__description_layer"
+                 onclick="openModal('images/pic2.png')">
+                <p class="img__description">Gallery#2</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery-item">
+        <div class="img__wrap">
+            <img class="img__img"
+                 src="images/pic3.png"
+                 alt="Image 3">
+
+            <div class="img__description_layer"
+                 onclick="openModal('images/pic3.png')">
+                <p class="img__description">Gallery#3</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery-item">
+        <div class="img__wrap">
+            <img class="img__img"
+                 src="images/pic4.png"
+                 alt="Image 4">
+
+            <div class="img__description_layer"
+                 onclick="openModal('images/pic4.png')">
+                <p class="img__description">Gallery#4</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <footer>
+        contact: <a href="https://t.me/vinchestro" style="color:#bbbbbb;text-decoration: none">@vinchestro</a>
+    </footer>
+</section>
+    
+
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage" src="" alt="">
+</div>
+
+
+<script>
+    function openModal(src) {
+        document.getElementById("modalImage").src = src;
+        document.getElementById("myModal").style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+</script>
+
+
+
+</body>
+
+
+
+</html>
