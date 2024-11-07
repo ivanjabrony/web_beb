@@ -17,7 +17,7 @@ html {
 }
 
 body {
-    height: 2000px;
+    height: max(100%, 2000px);
     margin: 0;
     background-image: linear-gradient(to right, #19212e, #181d29);
 }
@@ -30,14 +30,27 @@ header h1 {
     padding-left: 10px;    
 }
 
-section#main{
-    width: calc(100% - 300px);
-    float: left;
-    margin-left: 20px;
-    padding-left: 20px;
-    display: inline;
+@media screen and (min-width: 1000px) {
+    section#main {
+        width: calc(100% - 300px);
+        float: left;
+        margin-left: 20px;
+        padding-left: 20px;
+        margin-bottom: 50px;
+        display: inline;
+    }
 }
 
+@media screen and (max-width: 1000px) {
+    section#main {
+        width: 100%;
+        float: left;
+        margin-left: 20px;
+        padding-left: 20px;
+        margin-bottom: 50px;
+        display: inline;
+    }
+}
 footer {
     position: fixed;
     bottom: 0;
@@ -58,6 +71,36 @@ footer span {
     padding-left: 10px
 }
 
+/* table related */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 17px;
+    padding: 20px;
+    background-color: #5c88c8;
+}
+
+.title {
+    background-color: #001398;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.name, .age {
+    padding: 20px;
+    text-align: left;
+    font-size: 15px;
+}
+
+.odd {
+    background-image: linear-gradient(cadetblue, darkseagreen);
+}
+.even {
+    background-image: linear-gradient(darkseagreen, cadetblue);
+}
 
 /* text related styles */
 
@@ -66,13 +109,13 @@ p {
     padding-left: 10px;
 }
 
-.text-wrapper {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding: 10px 10px 10px 10px;
-    display: block;
-    background-image: linear-gradient(to right, #232c40, #181d29);
-}
+   .text-wrapper {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 10px 10px 10px 10px;
+        display: block;
+        background-image: linear-gradient(to right, #232c40, #181d29);
+    }
 
 aside {
     padding-left: 50px;
@@ -94,17 +137,27 @@ article {
     text-align: justify;
     line-height: 140%;
     letter-spacing: normal;
-    width: 1000px;
 }
 
 /* gallery related styles */
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(500px, 1fr));
-    grid-auto-rows: auto;
-    gap: 10px;
-    padding: 20px;
+@media screen and (min-width: 1000px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(100px, 100%));
+        grid-auto-rows: auto;
+        gap: 10px;
+        padding: 20px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(100px, 100%));
+        grid-auto-rows: auto;
+        gap: 10px;
+        padding: 20px;
+    }
 }
 
 .gallery-item {

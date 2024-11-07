@@ -1,4 +1,5 @@
 
+@media screen and (min-width: 1000px) {
 nav{
     width: 150px;
     height: auto;
@@ -57,4 +58,10 @@ li a {
 }
 .menu-btn:hover::after {
     opacity: 1;
+}
+}
+@media screen and (max-width: 1000px) {
+    nav{
+        display: none;
+    }
 }
