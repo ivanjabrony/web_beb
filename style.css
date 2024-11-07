@@ -1,13 +1,5 @@
 @import "navmenu_style.css";
 
-.gallery-item img {
-    object-fit: cover;
-    aspect-ratio: 1.618/1;
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
 
 /* main sections styles */
 
@@ -19,7 +11,7 @@ html {
 body {
     height: max(100%, 2000px);
     margin: 0;
-    background-image: linear-gradient(to right, #19212e, #181d29);
+    background: #181d29;
 }
 
 header {
@@ -43,11 +35,13 @@ header h1 {
 
 @media screen and (max-width: 1000px) {
     section#main {
-        width: 100%;
+        box-sizing: border-box;
+        width:auto;
         float: left;
         margin-left: 20px;
-        padding-left: 20px;
         margin-bottom: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
         display: inline;
     }
 }
@@ -95,10 +89,10 @@ footer span {
     font-size: 15px;
 }
 
-.odd {
+.row:nth-child(even) {
     background-image: linear-gradient(cadetblue, darkseagreen);
 }
-.even {
+.row:nth-child(odd) {
     background-image: linear-gradient(darkseagreen, cadetblue);
 }
 
@@ -109,13 +103,13 @@ p {
     padding-left: 10px;
 }
 
-   .text-wrapper {
-        margin-top: 30px;
-        margin-bottom: 30px;
-        padding: 10px 10px 10px 10px;
-        display: block;
-        background-image: linear-gradient(to right, #232c40, #181d29);
-    }
+.text-wrapper {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px 10px 10px 10px;
+    display: block;
+    background-image: linear-gradient(to right, #232c40, #181d29);
+}
 
 aside {
     padding-left: 50px;
@@ -162,6 +156,14 @@ article {
 
 .gallery-item {
     overflow: hidden;
+}
+
+.gallery-item img {
+    object-fit: cover;
+    aspect-ratio: 1.618/1;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .img__wrap {
