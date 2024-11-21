@@ -7,6 +7,7 @@
     <meta name="description" content="Open gallery of Vinchestro's recent works featuring different styles like anime, comics, paintings and more...">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vinchestro - art gallery</title>
+    <script src="scripts/modalScript.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -19,12 +20,10 @@
     <!--- add pages for galleries, faq and bio info--->
         <nav role="menubar">
             <ul class="nav_bar" style="list-style: none">
-                <li class="menu-btn"><a href="index.html">Main page</a></li>
-                <li class="menu-btn"><a href="about.html">About me</a></li>
-                <li class="menu-btn"><a href="">Gallery #1</a></li>
-                <li class="menu-btn"><a href="">Gallery #2</a></li>
-                <li class="menu-btn"><a href="">Gallery #3</a></li>
-                <li class="menu-btn"><a href="">FAQ</a></li>
+                <li class="menu-btn"><a href="index.html" class="menu-link">Main page</a></li>
+                <li class="menu-btn"><a href="about.html"  class="menu-link">About me</a></li>
+                <li class="menu-btn"><a href="gallery1.html"  class="menu-link">Sketches</a></li>
+                <li class="menu-btn"><a href="gallery2.html"  class="menu-link">Complete works</a></li>
             </ul>
         </nav>
         
@@ -37,8 +36,8 @@
                             alt="Image 1">
                         
                         <div class="img__description_layer"
-                             onclick="openModal('images/pic1.png')">
-                            <p class="img__description">Gallery#1</p>
+                             onclick="location.href='gallery1.html';">
+                            <p class="img__description">SKETCHES GALLERY</p>
                         </div>
                     </div>
                 </div>
@@ -50,8 +49,8 @@
                              alt="Image 2">
             
                         <div class="img__description_layer"
-                             onclick="openModal('images/pic2.png')">
-                            <p class="img__description">Gallery#2</p>
+                             onclick="location.href='gallery2.html';">
+                            <p class="img__description">COMPLETE WORKS GALLERY</p>
                         </div>
                     </div>
                 </div>
@@ -64,7 +63,7 @@
             
                         <div class="img__description_layer"
                              onclick="openModal('images/pic3.png')">
-                            <p class="img__description">Gallery#3</p>
+                            <p class="img__description">NonameGallery</p>
                         </div>
                     </div>
                 </div>
@@ -77,7 +76,7 @@
             
                         <div class="img__description_layer"
                              onclick="openModal('images/pic4.png')">
-                            <p class="img__description">Gallery#4</p>
+                            <p class="img__description">NonameGallery</p>
                         </div>
                     </div>
                 </div>
@@ -99,17 +98,6 @@
     <span class="close" onclick="closeModal()">&times;</span>
     <img class="modal-content" id="modalImage" src="" alt="">
 </div>
-
-<script>
-    function openModal(src) {
-        document.getElementById("modalImage").src = src;
-        document.getElementById("myModal").style.display = "block";
-    }
-
-    function closeModal() {
-        document.getElementById("myModal").style.display = "none";
-    }
-</script>
 
 
 

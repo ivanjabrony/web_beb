@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinchestro - art gallery #2</title>
+    <script src="scripts/modalScript.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+    <h1>Vinchestro gallery #2</h1>
+</header>
+
+<main>
+    <!--- add pages for galleries, faq and bio info--->
+    <nav role="menubar">
+        <ul class="nav_bar" style="list-style: none">
+            <li class="menu-btn"><a href="index.html" class="menu-link">Main page</a></li>
+            <li class="menu-btn"><a href="about.html"  class="menu-link">About me</a></li>
+            <li class="menu-btn"><a href="gallery1.html"  class="menu-link">Sketches</a></li>
+            <li class="menu-btn"><a href="gallery2.html"  class="menu-link">Complete works</a></li>
+        </ul>
+    </nav>
+
+    <section id="main">
+        <div class="gallery">
+            <div class="gallery-item">
+                <div class="img__wrap">
+                    <img class="img__img"
+                         src="images/CompleteWorks/cw1.png"
+                         alt="Image 1">
+
+                    <div class="img__description_layer"
+                         onclick="openModal('images/CompleteWorks/cw1.png')">
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="img__wrap">
+                    <img class="img__img"
+                         src="images/CompleteWorks/cw2.png"
+                         alt="Image 2">
+
+                    <div class="img__description_layer"
+                         onclick="openModal('images/CompleteWorks/cw2.png')">
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="img__wrap">
+                    <img class="img__img"
+                         src="images/CompleteWorks/cw3.png"
+                         alt="Image 3">
+
+                    <div class="img__description_layer"
+                         onclick="openModal('images/CompleteWorks/cw3.png')">
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="img__wrap">
+                    <img class="img__img"
+                         src="images/CompleteWorks/cw4.png"
+                         alt="Image 4">
+
+                    <div class="img__description_layer"
+                         onclick="openModal('images/CompleteWorks/cw4.png')">
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="img__wrap">
+                    <img class="img__img"
+                         src="images/CompleteWorks/cw5.png"
+                         alt="Image 5">
+
+                    <div class="img__description_layer"
+                         onclick="openModal('images/CompleteWorks/cw5.png')">
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="img__wrap">
+                    <img class="img__img"
+                         src="images/CompleteWorks/cw6.png"
+                         alt="Image 6">
+
+                    <div class="img__description_layer"
+                         onclick="openModal('images/CompleteWorks/cw6.png')">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</main>
+<footer>
+            <span>
+                contact: <a href="https://t.me/vinchestro" >@vinchestro</a>
+            </span>
+</footer>
+</body>
+
+
+
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage" src="" alt="">
+</div>
+
+</html>

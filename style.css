@@ -211,7 +211,8 @@ article {
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     left: 0;
     top: 0;
     width: 100%;
@@ -224,7 +225,7 @@ article {
     margin: auto;
     display: block;
     max-width: 90%;
-    max-height: 90%;
+    max-height: 140%;
 }
 
 .close {
