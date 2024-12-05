@@ -7,29 +7,29 @@ function createTable() {
     days_of_week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     table = document.createElement("table")
 
-    for (i = 0; i < drawingSessions + 1; i++) {
-        if (drawingSessions == 0) break
-        row = document.createElement("tr")
-        for (j = 0; j < 7; j++) {
-            column = document.createElement("td")
-            if (i == 0) {
-                column.appendChild(document.createTextNode(days_of_week[j]))
-            } else {
-                if (drawingType == 1) {
-                    column.appendChild(document.createTextNode("RISUEM SKETCH"))    
+    if (drawingSessions != 0) {
+        for (i = 0; i < drawingSessions + 1; i++) {
+            row = document.createElement("tr")
+            for (j = 0; j < 7; j++) {
+                column = document.createElement("td")
+                if (i == 0) {
+                    column.appendChild(document.createTextNode(days_of_week[j]))
+                } else {
+                    if (drawingType == 1) {
+                        column.appendChild(document.createTextNode("RISUEM SKETCH"))
+                    }
+                    if (drawingType == 2) {
+                        column.appendChild(document.createTextNode("RISUEM RENDER"))
+                    }
                 }
-                if (drawingType == 2) {
-                    column.appendChild(document.createTextNode("RISUEM RENDER"))
-                }
+
+                row.appendChild(column)
+                row.className = "row"
+
             }
-
-            row.appendChild(column)
-            row.className = "row"
-            
+            table.appendChild(row)
         }
-        table.appendChild(row)
     }
-
     table_div.appendChild(table)
 }
 
