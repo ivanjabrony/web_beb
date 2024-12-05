@@ -8,6 +8,7 @@ function createTable() {
     table = document.createElement("table")
 
     for (i = 0; i < drawingSessions + 1; i++) {
+        if (drawingSessions == 0) break
         row = document.createElement("tr")
         for (j = 0; j < 7; j++) {
             column = document.createElement("td")
