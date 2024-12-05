@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinchestro - art gallery #1</title>
+    <script src="scripts/modalScript.js" defer></script>
+    <script src="scripts/lab5script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+    <h1>Vinchestro gallery #1</h1>
+</header>
+
+<main>
+    <!--- add pages for galleries, faq and bio info--->
+    <nav role="menubar">
+        <ul class="nav_bar" style="list-style: none">
+            <li class="menu-btn"><a href="index.html" class="menu-link">Main page</a></li>
+            <li class="menu-btn"><a href="about.html"  class="menu-link">About me</a></li>
+            <li class="menu-btn"><a href="gallery1.html"  class="menu-link">Sketches</a></li>
+            <li class="menu-btn"><a href="gallery2.html"  class="menu-link">Complete works</a></li>
+            <li class="menu-btn"><a href="timetable.html"  class="menu-link">Timetable</a></li>
+        </ul>
+    </nav>
+
+    <section id="main">
+        <form>
+            <p><b>Do I want to Sketch or Render?</b></p>
+                <label>
+                    <input type="radio" name="drawingType" value="1">
+                </label>Sketch<Br>
+                <label>
+                    <input type="radio" name="drawingType" value="2">
+                </label>Render
+            <p><b>how many hours I want to do per drawing?</b></p>
+                <label>
+                    <input type="text" pattern="[0-9]*" title="Допускаются только числа" name="drawingSessions">
+                </label>
+            <p><input type="submit"></p>
+        </form>
+        <div class="generated_table"></div>
+    </section>
+
+</main>
+<footer>
+            <span>
+                contact: <a href="https://t.me/vinchestro" >@vinchestro</a>
+            </span>
+</footer>
+</body>
+
+
+
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage" src="" alt="">
+</div>
+
+
+
+</html>
